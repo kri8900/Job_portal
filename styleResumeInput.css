@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffde758;
+    padding: 0px;
+    margin: 0px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url("https://img.freepik.com/free-photo/office-supplies-with-keyboard-gray-desk_23-2148052624.jpg?t=st=1722444772~exp=1722448372~hmac=227b730ace2ccaf498f18e2d3f7a1fab54d2d79364a0b5b2cc3be8808dc065ca&w=740"); */
+    background-image: url("https://img.freepik.com/premium-photo/top-view-blue-desk-with-working-equipment-placed-office-copy-space_37714-1238.jpg?w=740");
+    /* background-image: url("https://img.freepik.com/free-photo/top-view-desk-concept-with-gray-background_23-2148236825.jpg"); */
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.form-container {
+    background-color: #fff0b8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40rem;
+}
+
+h1 {
+    text-align: center;
+    color: #a60903;
+    font-weight: 700;
+    /* color: #461212; */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="file"],
+.form-group input[type="number"],
+
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

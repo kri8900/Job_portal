@@ -1,0 +1,173 @@
+body, h1, a, button {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: #333;
+}
+h1{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(pics/job22.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+overflow-x: hidden;
+
+}
+
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100%;
+}
+
+header .logo img {
+    height: 40px;
+    padding-left: 10px;
+
+}
+
+.top-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.main-content {
+    text-align: left;
+    color: #020500;
+    width: 50%;
+}
+
+.main-content h1 {
+    font-size: 4em;
+    background: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: text-reveal 3s forwards;
+}
+
+.main-content .highlight {
+    color: #040502;
+}
+
+@keyframes text-reveal {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+#back-button{
+    background-color: #2db95e;
+    color: white;
+}
+#post-job-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #3889bb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-top: 20px;
+}
+
+#post-job-button:hover {
+    background-color: #0f253d;
+}
+
+
+.picture-container {
+    width: 50%;
+    text-align: right;
+    height: 5vh;
+}
+
+.picture-container img {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.terms {
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #555;
+}
+
+.form-container {
+    width: 80%;
+    margin: 10px auto;
+    padding: 30px;
+    background-color: transparent;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+form label {
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #7199c4;
+}
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+#post-events-button {
+    background-color:  #3889bb ;
+}
+
+#post-events-button:hover {
+    background-color:  #7199c4;
+}

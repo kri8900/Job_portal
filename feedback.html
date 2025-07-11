@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="styleFeedback.css">
+</head>
+<body>
+    <h1>Please submit your valuable Feedback </h1>
+    <div class="container">
+        <form id="feedbackForm" action="feedback.php" method="post">
+            <div class="form-group side-by-side">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="number" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="excellent">Excellent</option>
+                    <option value="good">Good</option>
+                    <option value="average">Average</option>
+                    <option value="poor">Poor</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" ></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <p id="responseMessage"></p>
+    </div>
+
+    <script>
+        document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+
+            fetch("feedback.php", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const responseMessage = document.getElementById("responseMessage");
+                responseMessage.textContent = data.message;
+
+                if (data.status === "success") {
+                    setTimeout(() => {
+                        window.location.href = "index1.php";  
+                    }, 1500); 
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+        });
+    </script>
+</body>
+</html>

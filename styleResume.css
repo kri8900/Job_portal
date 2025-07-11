@@ -1,0 +1,186 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#heading{
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin:  1rem ;
+    color: rgb(16, 23, 79);
+}
+.resume {
+    display: flex;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #fff;
+    box-shadow: 0 0 10px black;
+    border: 10px groove rgba(10, 34, 114, 0.909);
+    transition: transform 0.3s;
+}
+
+.resume:hover {
+    box-shadow: 0 0 20px rgb(33, 26, 7);
+    transform: scale(1.01);
+}
+
+.sidebar {
+    background: #3d97d3;
+    color: #150101;
+    padding: 20px;
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.profile img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
+    transition: transform 0.3s;
+    box-shadow: 0 0 15px black;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+.profile h1 {
+    text-align: center;
+    margin: 0;
+}
+
+.profile h2 {
+    text-align: center;
+    margin: 0;
+    font-weight: normal;
+    font-size: 1.1em;
+    color: #540a0a;
+}
+
+.contact, .interests {
+    margin-top: 20px;
+}
+
+.contact h3, .interests h3 {
+    border-bottom: 3px solid #000000;
+    padding-bottom: 5px;
+}
+
+.main {
+    padding: 20px;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    color: #007acc;
+    border-bottom: 3px solid #072c45;
+    padding-bottom: 5px;
+}
+
+.job, .education {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 1.4rem;
+}
+
+li {
+    margin-bottom: 3px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.buttons button {
+    font-size: 1.2rem;
+    background-color: rgb(183, 221, 237);
+    color: blue;
+    border: 2px solid blue;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 5px 1rem;
+}
+
+.buttons button:hover {
+    background-color: blue;
+    color: white;
+}
+
+footer {
+    display: flex;
+    font-size: 1rem;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .profile img {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .sidebar {
+        width: 40%;
+        padding: 3vw;
+    }
+
+    .resume {
+        width: 100%;
+    }
+
+    .profile h1 {
+        font-size: 8vw;
+        margin-bottom: 4vw;
+    }
+
+    .profile h2 {
+        font-size: 7vw;
+    }
+
+    .contact h3, .interests h3 {
+        font-size: 7vw;
+    }
+
+    .contact p, .interests p {
+        font-size: 5vw;
+    }
+
+    .main {
+        padding: 6px;
+        width: 60%;
+    }
+}
+
+@media print {
+    #nav {
+        display: none;
+    }
+
+    .resume * {
+        display: block;
+    }
+
+    .buttons {
+        display: none;
+    }
+}

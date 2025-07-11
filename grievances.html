@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleGrievances.css">
+    <title>Grievance Page</title>
+</head> 
+<body>
+    <div class="container">
+        <h1>Grievance Form</h1>
+        <h2>For Complaints relating to content and Consumer Complaints.</h2>
+        <form action="grievances.php" method="post" enctype="multipart/form-data">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your E-Mail ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="number">Your Contact Number:</label>
+            <input type="number" id="number" name="number" required>
+
+            <label for="portal">Please mark the web portal which hosts the issue(s) encountered by you:</label>
+            <select id="portal" name="portal" required>
+                <option value="">Select</option>
+                <option value="Job Seeker">Job Seeker portal</option>
+                <option value="Employer">Employer portal</option>
+            </select>
+
+            <label for="url">Please share the link (URL) of the Page which you are reporting against:</label>
+            <input type="url" id="url" name="url" required>
+
+            <label for="reason">Please tell us the reason for your complaint/concern. Choose an option which most closely matches with your concern. If you are unsure which option to choose, please select the last option. Thanks</label>
+            <select id="reason" name="reason" required>
+                <option value="">Choose an option</option>
+                <option value="belongs_to_another_person">Belongs to another person and to which the user does not have any right</option>
+                <option value="defamatory">Is defamatory, obscene, pornographic, etc.</option>
+                <option value="harmful_to_child">Is harmful to child</option>
+                <option value="infringes_proprietary_rights">Infringes any proprietary rights</option>
+                <option value="violates_law">Violates any law</option>
+                <option value="misleading">Deceives or misleads</option>
+                <option value="impersonates">Impersonates another person</option>
+                <option value="threatens_national_security">Threatens national security</option>
+                <option value="contains_virus">Contains software virus</option>
+                <option value="false_and_untrue">Is patently false and untrue</option>
+                <option value="others">Others (including Consumer Complaints)</option>
+            </select>
+
+            <label for="description">Please describe your complaint/concern in detail:</label>
+            <textarea id="description" name="description" rows="6" required></textarea>
+
+            <label for="file">Please upload any supporting document(s) pertaining to the issue you are reporting:</label>
+            <input type="file" id="file" name="file" multiple>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+

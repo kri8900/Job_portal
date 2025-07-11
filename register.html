@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styleRegister.css">
+</head>
+<body>
+    <div class="registration-page-background pt-5 pb-5">
+        <div class="container">
+            <div class="row d-flex flex-row justify-content-center">
+                <div class="col-12 col-md-6">
+                    <div class="registration-form">
+                        <h1 class="registration-form-heading">Register Here</h1>
+                        <form id="registrationForm" action="register.php" method="post">
+                            <p class="form-name">Full Name : </p>
+                            <input type="text" class="r-form-fill-box" name="name" placeholder="Full Name" required>
+                            <p class="form-name">Mobile Number : </p>
+                            <input type="number" class="r-form-fill-box" name="mobile" placeholder="Mobile Number" required>
+                            <p class="form-name">Email : </p>
+                            <input type="email" class="r-form-fill-box" name="email" placeholder="Email" required>
+                            <p class="form-name">Password : </p>
+                            <input type="password" class="r-form-fill-box" name="password" placeholder="Password" required>
+                           
+                            <div class="button-container">
+                                <button class="r-registration-submit-button" type="button" id="otpButton">Send OTP</button>
+                            </div>
+                            <p id="message"></p>
+                        </form>
+                        <div id="otpForm">
+                            <p>Enter OTP:</p>
+                            <input type="number" id="otpInput" placeholder="Enter OTP" required>
+                            <button class="r-registration-submit-button" type="button" id="verifyOtpButton">Verify OTP</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    
+
+    // js code to handle OTP verification
+   document.addEventListener("DOMContentLoaded", function() {
+    let otpButton = document.getElementById("otpButton");
+    let otpForm = document.getElementById("otpForm");
+    let message = document.getElementById("message");
+
+    otpButton.addEventListener("click", function() {
+    let name = document.querySelector("input[name='name']").value.trim();
+    let mobile = document.querySelector("input[name='mobile']").value.trim();
+    let email = document.querySelector("input[name='email']").value.trim();
+    let password = document.querySelector("input[name='password']").value.trim();
+
+    // Regex for validations
+    let nameRegex = /^[A-Za-z\s]+$/;
+    let mobileRegex = /^[0-9]{10}$/;
+
+    if (name === "" || mobile === "" || email === "" || password === "") {
+      alert("All fields are mandatory!");
+      return false; // ⛔ Stop execution
+    }
+
+    if (!nameRegex.test(name)) {
+      alert("Name should contain only alphabets.");
+      return false; // ⛔ Stop execution
+    }
+
+    if (!mobileRegex.test(mobile)) {
+      alert("Mobile number should be exactly 10 digits.");
+      return false; // ⛔ Stop execution
+    }
+
+    if (password.length < 8) {
+      alert("Password should be at least 8 characters long.");
+      return false; // ⛔ Stop execution
+    }
+    else{
+        true;
+    }
+
+
+        let formData = new FormData(document.getElementById("registrationForm"));
+
+        fetch('register.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log("Response from server (OTP request):", data);
+            if (data.includes("OTP sent successfully")) {
+                message.textContent = "OTP sent successfully! Please check your email.";
+                otpForm.style.display = 'block';
+            } else {
+                message.textContent = "Error sending OTP. Please try again. Server response: " + data;
+            }
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+    });
+
+    document.getElementById("verifyOtpButton").addEventListener("click", function() {
+        let otp = document.getElementById("otpInput").value;
+        let formData = new URLSearchParams(new FormData(document.getElementById("registrationForm")));
+        formData.append('otp', otp);
+
+        fetch('register.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            console.log("Response from server (OTP verification):", data);
+            if (data.trim() === "Registration successful!") {
+                message.textContent = "Registration successful!";
+                setTimeout(function() {
+                    window.location.href = 'login.html';
+                }, 2000); 
+            } else {
+                message.textContent = data;
+            }
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

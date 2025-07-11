@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 5;
+    background-image:url(pics/feedback.jpg);
+    background-size: cover;
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.container {
+    background: white;
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 13px;
+}
+
+label {
+    margin: 10px 0 5px;
+    text-align: left;
+    color: #555;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #fda085;
+    outline: none;
+    box-shadow: 0 0 5px rgba(253, 160, 133, 0.5);
+}
+
+button {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(120deg, #f5576c 0%, #f093fb 100%);
+}
+
+.side-by-side {
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-by-side > div {
+    width: 48%;
+}
+#responseMessage{
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px 30px;
+    }
+    input, select, textarea {
+        font-size: 14px;
+    }
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .side-by-side {
+        flex-direction: column;
+    }
+    .side-by-side > div {
+        width: 100%;
+    }
+}
+

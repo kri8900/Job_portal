@@ -1,0 +1,68 @@
+.fake-job-bg-container {
+    background-color: white;
+    padding: 0px;
+    margin-left: 0px;
+}
+
+.top-section-bg {
+    background-color: #262d5e;
+    padding: 12px;
+
+}
+
+.top-section-main-heading {
+    color: white;
+    font-size: 15px;
+}
+
+.top-section-description {
+    color: #c7c8d1;
+    font-size: 12px;
+}
+
+.top-section-md-bg {
+    background-color: white;
+}
+
+.top-section-md-main-heading {
+    color: black;
+    font-size: 40px;
+}
+
+.top-section-md-description {
+    font-size: 20px;
+}
+
+.bottom-card-bg {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bottom-card-heading {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.fake-job-list {
+    font-size: 14px;
+}
+
+.login-and-report-button {
+width: fit-content;
+}
+
+.bottom-md-card {
+    background-image: linear-gradient(to right, #262d5e, #3c84c7);
+}
+
+.bottom-md-card-heading {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.fake-job-list-md {
+    font-size: 16px;
+    color: white;
+    list-style-type: disc;
+}

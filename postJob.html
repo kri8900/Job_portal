@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Job</title>
+    <link rel="stylesheet" href="stylePostJob.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Post a Job</h1>
+        <form id="job-posting-form" action="postJob.php" method="post">
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" name="job-title" required>
+
+            <label for="company-name">Company Name:</label>
+            <input type="text" id="company-name" name="company-name" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="job-type">Job Type:</label>
+            <select id="job-type" name="job-type" required>
+                <option value="full-time">Full-time</option>
+                <option value="part-time">Part-time</option>
+                <option value="contract">Contract</option>
+                <option value="internship">Internship</option>
+            </select>
+
+            <label for="salary">Salary:</label>
+            <input type="text" id="salary" name="salary" required>
+
+            <label for="job-description">Job Description:</label>
+            <textarea id="job-description" name="job-description" ></textarea>
+
+            <div class="button-group">
+                <button type="submit" id="post-job-button">Post Job</button>
+               <a href="employerIndex.php"><button type="button" id="back-button">Go Back</button></a> 
+
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const jobtitle = document.getElementById("job-title");
+            const companyName = document.getElementById("company-name");
+            const jobdescription = document.getElementById("job-description");
+            const location = document.getElementById("location");
+        
+            function capitalizeFirstLetter(input) {
+                let value = input.value;
+                if (value.length > 0) {
+                    input.value = value.charAt(0).toUpperCase() + value.slice(1);
+                }
+            }
+        
+            jobtitle.addEventListener("blur", function () {
+                capitalizeFirstLetter(jobtitle);
+            });
+            companyName.addEventListener("blur", function () {
+                capitalizeFirstLetter(companyName);
+            });
+            location.addEventListener("blur", function () {
+                capitalizeFirstLetter(location);
+            });
+            jobdescription.addEventListener("blur", function () {
+                capitalizeFirstLetter(jobdescription);
+            });
+        });
+            </script>
+</body>
+</html>

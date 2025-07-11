@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+    <link rel="stylesheet" href="styleResumeInput.css">
+</head>
+<body>
+    <main>
+        <div class="form-container">
+            <h1>Resume Form</h1>
+            <form action="resume.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required placeholder="Web-Developer">
+                </div>
+                <div class="form-group">
+                    <label for="profilePicture">Profile Picture:</label>
+                    <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile:</label>
+                    <input type="number" id="mobile" name="mobile" required placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="email address">
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required placeholder="Resident Address">
+                </div>
+                <div class="form-group">
+                    <label for="about">About Me:</label>
+                    <textarea id="about" name="about" required>I am a versatile Full Stack Web Developer with experience in both front-end and back-end development. Skilled in a wide range of programming languages and frameworks, I build robust, user-friendly web applications from start to finish. My expertise includes HTML, CSS, JavaScript, Php and database like MySQL. With a strong foundation in problem-solving and a keen eye for design, I am passionate about creating seamless and engaging user experiences.</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="education">Education:</label>
+                    <textarea id="education" name="education" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="skills">Skills and Abilities:</label>
+                    <textarea id="skills" name="skills" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="technologies">Technologies:</label>
+                    <textarea id="technologies" name="technologies" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="projects">Projects:</label>
+                    <textarea id="projects" name="projects" required></textarea>
+                </div>
+                <button type="submit">Generate Resume</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

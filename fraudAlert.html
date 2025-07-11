@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<link rel="stylesheet" href="styleFraudAlert.css">
+<body>
+    <div class="fake-job-bg-container pb-5">
+        <div class="top-section-bg d-md-none">
+            <h1 class="top-section-main-heading">Welcome to CarrierUp.com Security Center</h1>
+            <p class="top-section-description">We are committed to making your job search a safe and fraud-free experience. However, we would suggest you to be cautious of fraudent emails and calls.</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 pt-5 pb-5 d-none d-md-block">
+                    <div class="top-section-md-bg text-center">
+                        <h1 class="top-section-md-main-heading">Welcome to CarrierUp.com Security Center</h1>
+                        <p class="top-section-md-description">We are committed to making your job search a safe and fraud-free experience. However, we would suggest you to be cautious of fraudent emails and calls.</p>
+                    </div>
+                </div>
+                <div class="col-12 d-md-none mt-3">
+                    <div class="bottom-card-bg shadow-lg">
+                        <h1 class="bottom-card-heading">6 Signs to identify fake job offers:</h1>
+                        <ol class="fake-job-list p-3">
+                            <li>Asking for money(mostly refundable).</li>
+                            <li>Looking for confidential information (Credit Card / OTP / Aadhar /PAN. ec).</li>
+                            <li>Badly written jobs ads (incorrect grammar).</li>
+                            <li>Offering easy hirinh criteria (on the spot offer, no interview).</li>
+                            <li>Luring with salary beyond expectation.</li>
+                            <li>Using the names of known job portals (fake domains line) </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-12 d-md-none mt-3">
+                    <div class="bottom-card-bg shadow-lg">
+                        <h1 class="bottom-card-heading">4 ways to protect yourself against job frauds:</h1>
+                        <ol class="fake-job-list p-3">
+                            <li>Never respond without veriefying the legitimacy of the job offer.</li>
+                            <li>Do not share personal/bank account details with anyone.</li>
+                            <li>Refuse to make any payment for job offers.</li>
+                            <li>Veriefy online presence and reviews of the recquiremenr firm.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="col-12 d-none d-md-block">
+                    <div class="bottom-md-card p-4 d-flex flex-row">
+                        <div>
+                            <h1 class="bottom-md-card-heading">6 Signs to identify fake job offers:</h1>
+                            <ol class="fake-job-list-md p-3">
+                                <li>Asking for money(mostly refundable).</li>
+                                <li>Looking for confidential information (Credit Card / OTP / Aadhar /PAN. ec).</li>
+                                <li>Badly written jobs ads (incorrect grammar).</li>
+                                <li>Offering easy hirinh criteria (on the spot offer, no interview).</li>
+                                <li>Luring with salary beyond expectation.</li>
+                                <li>Using the names of known job portals (fake domains line)</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h1 class="bottom-md-card-heading">4 ways to protect yourself against job frauds:</h1>
+                            <ol class="fake-job-list-md p-3">
+                                <li>Never respond without veriefying the legitimacy of the job offer.</li>
+                                <li>Do not share personal/bank account details with anyone.</li>
+                                <li>Refuse to make any payment for job offers.</li>
+                                <li>Veriefy online presence and reviews of the recquiremenr firm.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 text-center mt-4">
+                    <div>
+                        <p class="fake-job-list">
+                            If you've received (or receive) any such suspicious email communication, reach out to us via email at
+                           <strong>noumanyt2003@gmail.com</strong> 
+                        </p>
+                        <p class="fake-job-list">OR</p>
+                        <button type="button" class="login-and-report-button btn btn-primary" id="login">LOGIN AND REPORT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</body>
+<script>
+    let login = document.getElementById("login")
+    login.addEventListener("click", function(){
+        location.replace("login.html")
+    });
+</script>
+</html>

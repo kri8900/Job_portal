@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Events and Challenges</title>
+    <link rel="stylesheet" href="stylePostEvent.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Post an Event / Challenge</h1>
+        <form id="event-form" action="postEvent.php" method="post">
+            <label for="event-title">Event Title:</label>
+            <input type="text" id="event-title" name="event-title" required>
+
+            <label for="company-name">Event Company Name:</label>
+            <input type="text" id="company-name" name="company-name" required>
+
+            <label for="date">Date of event :</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="lastDate">Last Date to apply :</label>
+            <input type="date" id="lastDate" name="lastDate" required>
+
+            <label for="event-type">Event Type:</label>
+            <select id="event-type" name="event-type" required>
+                <option value="conference">Conference</option>
+                <option value="workshop">Workshop</option>
+                <option value="webinar">Webinar</option>
+                <option value="Challenge">Challenge</option>
+            </select>
+
+            <label for="prizes">Prizes:</label>
+            <input type="text" id="prizes" name="prizes" required>
+
+            <label for="event-description">Event Description:</label>
+            <textarea id="event-description" name="event-description"></textarea>
+
+            <div class="button-group">
+                <button type="submit" id="post-event-button">Post Event</button>
+                <a href="employerIndex.php" id="back-button">Go Back</a>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const eventTitle = document.getElementById("event-title");
+            const companyName = document.getElementById("company-name");
+            const eventdescription = document.getElementById("event-description");
+        
+            function capitalizeFirstLetter(input) {
+                let value = input.value;
+                if (value.length > 0) {
+                    input.value = value.charAt(0).toUpperCase() + value.slice(1);
+                }
+            }
+        
+            eventTitle.addEventListener("blur", function () {
+                capitalizeFirstLetter(eventTitle);
+            });
+        
+            companyName.addEventListener("blur", function () {
+                capitalizeFirstLetter(companyName);
+            });
+            eventdescription.addEventListener("blur", function () {
+                capitalizeFirstLetter(eventdescription);
+            });
+        });
+        </script>
+        
+</body>
+</html>

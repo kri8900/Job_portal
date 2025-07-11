@@ -1,0 +1,48 @@
+.job-search-bg {
+    background-color: #2179eb;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    height: 100vh;
+}
+
+.job-search-para {
+    color: white;
+    font-family: sans-serif;
+    font-size:1.3rem;
+    text-align: center;
+}
+
+.r-form-fill-box {
+    font-size: 15px;
+    width: 100%;
+    padding: 10px;
+    border-width: 0px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+}
+
+.r-registration-submit-button {
+    height: 38px;
+    width: 135px;
+    background-color: #447356;
+    color: white;
+    border-width: 0px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 18px;
+}
+#message{
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+font-weight: bold;
+}

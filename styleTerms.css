@@ -1,0 +1,22 @@
+.terms-and-conditions-bg-container {
+    background-color: white;
+}
+
+.terms-conditions-main-heading {
+    color: #bf660d;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.terms-conditions-sub-heading {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.terms-conditions-description {
+    font-size: 14px;
+}
+
+.ordered-list {
+    list-style-type: lower-alpha;
+}

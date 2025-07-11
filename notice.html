@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<link rel="stylesheet" href="styleNotice.css">
+<body>
+    <div class="summons-notice-bg pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="notice-top-heading">Complaint / Status Form - Only for Law Enforcement Agencies</h1>
+                    <form action="notice.php" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label class="top-froms" for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" required placeholder="Full Name">
+                        </div>
+                        <div class="form-group">
+                            <label class="top-froms" for="email">Your Email ID:</label>
+                            <input type="email" id="email" name="email" required placeholder="email address">
+                        </div>
+                        <div class="form-group">
+                            <label class="top-froms" for="issues">Please mark the web portal which hosts the issue(s) encountered by you :</label>
+                            <select name="issues" id="issues" required>
+                                <option value="nothing">Select</option>
+                                <option value="employer">Employer page</option>
+                                <option value="jobSeeker">Job seeker page</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="top-froms" for="url">Please share the link (URL) of the Page which you are reporting against:</label>
+                            <input type="url" id="url" name="url">
+                        </div>
+                        <div>
+                            <p>
+                                Please tell us the reason for your complaint/concern.
+                                Choose an option which most closely matches with your concern.
+                                If you are unsure which option to choose, please select the last option. Thanks
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="check1" id="check1" value="belongs to another person and to which the user does not have any right">
+                            <label for="check1">belongs to another person and to which the user does not have any right</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="check2" id="check2" value="is defamatory, obscene, pornographic, paedophilic, invasive of another's privacy, including bodily privacy, insulting or harassing on the basis of gender, libellous, racially or ethnically objectionable, relating or encouraging money laundering or gambling, or otherwise inconsistent with or contrary to the laws in force">
+                            <label for="check2">is defamatory, obscene, pornographic, paedophilic, invasive of another's privacy, including bodily privacy, insulting or harassing on the basis of gender, libellous, racially or ethnically objectionable, relating or encouraging money laundering or gambling, or otherwise inconsistent with or contrary to the laws in force</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="check3" id="check3" value="is harmful to child">
+                            <label for="check3">is harmful to child</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="check4" id="check4" value="infringes any patent, trademark, copyright or other proprietary rights">
+                            <label for="check4">infringes any patent, trademark, copyright or other proprietary rights</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="check5" id="check5" value="violates any law for the time being in force">
+                            <label for="check5">violates any law for the time being in force</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="check6" id="check6" value="deceives or misleads the addressee about the origin of the message or knowingly and intentionally communicates any information which is patently false or misleading in nature but may reasonably be perceived as a fact">
+                            <label for="check6">deceives or misleads the addressee about the origin of the message or knowingly and intentionally communicates any information which is patently false or misleading in nature but may reasonably be perceived as a fact</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="check7" id="check7" value="impersonates another person">
+                            <label for="check7">impersonates another person</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="check9" id="check9" value="contains software virus or any other computer code, file or program designed to interrupt, destroy or limit the functionality of any computer resource">
+                            <label for="check9">contains software virus or any other computer code, file or program designed to interrupt, destroy or limit the functionality of any computer resource</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="check10" id="check10" value="is patently false and untrue, and is written or published in any form, with the intent to mislead or harass a person, entity or agency for financial gain or to cause any injury to any person">
+                            <label for="check10">is patently false and untrue, and is written or published in any form, with the intent to mislead or harass a person, entity or agency for financial gain or to cause any injury to any person</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="others" id="others" value="Other">
+                            <label for="others">Other</label>
+                            <input type="text" id="others" name="others">
+                        </div>
+                        <div class="form-group">
+                            <label class="top-froms" for="details">Please describe your complaint/concern in detail:</label>
+                            <textarea class="box-textarea" id="details" name="details" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="top-froms" for="uploads">Please upload any supporting document(s) pertaining to the issue you are reporting:</label>
+                            <input type="file" id="uploads" name="uploads" accept="image/*,.pdf">
+                        </div>
+                        <p>(Please upload a PNG, JPG, PDF or JPEG file only and ensure that the file is currently not in use. [Maximum File Size Limit 10 MB])</p>
+                        <button type="submit" class="form-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
